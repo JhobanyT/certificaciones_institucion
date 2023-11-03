@@ -1,6 +1,5 @@
 const express = require('express');
 const insRouter = require('./routes/insRouter.js');
-const documentoRouter = require('./routes/documentoRouter.js');
 
 const app = express();
 
@@ -22,7 +21,6 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.use('/api', documentoRouter);
 app.use('/api', insRouter);
 
 module.exports = app;
